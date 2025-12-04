@@ -27,7 +27,9 @@ Within **app_tk.py** there is a section near the beginning of the code called 'D
 
 The only code you have to change is if you set the password to a different number other than the one provided here. 
 The Hostname may change as well as the Port depending on your configuration of the server. 
-Make sure to note down your changes when setting up your server in Workbench. 
+Make sure to note down your changes when setting up your server in Workbench.
+
+![Adding_Connection.png](../../../Downloads/Adding_Connection.png)
 
 Additionally, you do not need to have MySQL Workbench open to have this application working since it runs on a local
 host (AKA, your pc).
