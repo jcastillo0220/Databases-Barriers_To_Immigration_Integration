@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+--
+-- Host: localhost    Database: immigrant_integration
+-- ------------------------------------------------------
+-- Server version	8.0.44
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `custodystatus`
+--
+
+DROP TABLE IF EXISTS `custodystatus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `custodystatus` (
+  `custody_id` int NOT NULL AUTO_INCREMENT,
+  `case_id` varchar(50) DEFAULT NULL,
+  `custody_type` varchar(100) DEFAULT NULL,
+  `detention_facility` varchar(150) DEFAULT NULL,
+  `release_date` date DEFAULT NULL,
+  `custody_outcome` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`custody_id`),
+  KEY `fk_custody_case` (`case_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=151 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `custodystatus`
+--
+
+LOCK TABLES `custodystatus` WRITE;
+/*!40000 ALTER TABLE `custodystatus` DISABLE KEYS */;
+INSERT INTO `custodystatus` VALUES (1,'TX001','Detained','Houston Processing Center','2016-09-10','Pending'),(2,'TX002','Released',NULL,'2016-10-12','Awaiting Hearing'),(3,'TX003','Never Detained',NULL,NULL,'Resolved'),(4,'TX004','Detained','Laredo Detention Center','2017-03-20','Removed'),(5,'TX005','Released',NULL,'2017-05-14','Asylum Granted'),(6,'TX006','Detained','El Paso SPC','2017-11-02','Pending'),(7,'TX007','Never Detained',NULL,NULL,'Resolved'),(8,'TX008','Detained','Houston SPC','2018-02-12','Removed'),(9,'TX009','Released',NULL,'2018-06-01','Pending'),(10,'TX010','Never Detained',NULL,NULL,'Asylum Granted'),(11,'TX011','Detained','Port Isabel Detention Center','2018-08-25','Removed'),(12,'TX012','Released',NULL,'2018-11-10','Pending'),(13,'TX013','Detained','Pearsall Detention Center','2019-03-12','Pending'),(14,'TX014','Never Detained',NULL,NULL,'Asylum Granted'),(15,'TX015','Detained','Houston SPC','2019-07-05','Removed'),(16,'TX016','Released',NULL,'2019-08-21','Awaiting Hearing'),(17,'TX017','Never Detained',NULL,NULL,'Resolved'),(18,'TX018','Detained','Houston Processing Center','2019-10-11','Pending'),(19,'TX019','Detained','El Paso SPC','2020-01-14','Removed'),(20,'TX020','Released',NULL,'2020-03-20','Asylum Granted'),(21,'TX021','Detained','Houston SPC','2020-05-01','Removed'),(22,'TX022','Released',NULL,'2020-08-12','Pending'),(23,'TX023','Never Detained',NULL,NULL,'Resolved'),(24,'TX024','Detained','Laredo Detention Center','2021-02-14','Removed'),(25,'TX025','Detained','Port Isabel Detention Center','2021-06-01','Pending'),(26,'TX026','Released',NULL,'2021-08-15','Asylum Granted'),(27,'TX027','Never Detained',NULL,NULL,'Resolved'),(28,'TX028','Detained','El Paso SPC','2022-02-01','Removed'),(29,'TX029','Released',NULL,'2022-05-22','Pending'),(30,'TX030','Detained','Houston Processing Center','2022-08-30','Removed'),(31,'TX031','Detained','Houston SPC','2022-11-05','Removed'),(32,'TX032','Released',NULL,'2023-01-15','Awaiting Hearing'),(33,'TX033','Never Detained',NULL,NULL,'Resolved'),(34,'TX034','Detained','Laredo Detention Center','2023-03-08','Removed'),(35,'TX035','Released',NULL,'2023-04-20','Asylum Granted'),(36,'TX036','Detained','Port Isabel Detention Center','2023-06-12','Pending'),(37,'TX037','Detained','Houston Processing Center','2023-08-02','Removed'),(38,'TX038','Released',NULL,'2023-09-18','Pending'),(39,'TX039','Never Detained',NULL,NULL,'Resolved'),(40,'TX040','Detained','El Paso SPC','2023-11-25','Pending'),(41,'TX041','Released',NULL,'2024-01-30','Awaiting Hearing'),(42,'TX042','Never Detained',NULL,NULL,'Asylum Granted'),(43,'TX043','Detained','Laredo Detention Center','2024-03-11','Removed'),(44,'TX044','Detained','Port Isabel Detention Center','2024-05-06','Pending'),(45,'TX045','Released',NULL,'2024-06-22','Asylum Granted'),(46,'TX046','Never Detained',NULL,NULL,'Resolved'),(47,'TX047','Detained','Houston SPC','2024-07-15','Removed'),(48,'TX048','Detained','El Paso SPC','2024-08-28','Pending'),(49,'TX049','Released',NULL,'2024-09-20','Awaiting Hearing'),(50,'TX050','Detained','Houston Processing Center','2024-10-18','Removed'),(51,'TX051','Detained','Houston SPC','2012-04-12','Pending'),(52,'TX052','Released',NULL,'2012-06-18','Awaiting Hearing'),(53,'TX053','Never Detained',NULL,NULL,'Resolved'),(54,'TX054','Detained','El Paso SPC','2013-01-20','Removed'),(55,'TX055','Released',NULL,'2013-03-05','Asylum Granted'),(56,'TX056','Detained','Port Isabel Detention Center','2013-07-14','Pending'),(57,'TX057','Never Detained',NULL,NULL,'Resolved'),(58,'TX058','Detained','Houston SPC','2014-02-10','Removed'),(59,'TX059','Released',NULL,'2014-04-22','Pending'),(60,'TX060','Never Detained',NULL,NULL,'Asylum Granted'),(61,'TX061','Detained','Laredo Detention Center','2014-08-19','Removed'),(62,'TX062','Released',NULL,'2015-01-15','Pending'),(63,'TX063','Never Detained',NULL,NULL,'Resolved'),(64,'TX064','Detained','El Paso SPC','2015-03-30','Removed'),(65,'TX065','Released',NULL,'2015-06-12','Asylum Granted'),(66,'TX066','Detained','Houston SPC','2015-09-25','Pending'),(67,'TX067','Never Detained',NULL,NULL,'Resolved'),(68,'TX068','Detained','Port Isabel Detention Center','2016-02-18','Removed'),(69,'TX069','Released',NULL,'2016-04-10','Pending'),(70,'TX070','Never Detained',NULL,NULL,'Asylum Granted'),(71,'TX071','Detained','Laredo Detention Center','2016-07-22','Removed'),(72,'TX072','Released',NULL,'2017-01-05','Pending'),(73,'TX073','Never Detained',NULL,NULL,'Resolved'),(74,'TX074','Detained','El Paso SPC','2017-03-15','Removed'),(75,'TX075','Released',NULL,'2017-06-01','Asylum Granted'),(76,'TX076','Detained','Houston SPC','2017-08-20','Pending'),(77,'TX077','Never Detained',NULL,NULL,'Resolved'),(78,'TX078','Detained','Port Isabel Detention Center','2018-01-12','Removed'),(79,'TX079','Released',NULL,'2018-03-28','Pending'),(80,'TX080','Never Detained',NULL,NULL,'Asylum Granted'),(81,'TX081','Detained','Laredo Detention Center','2018-06-10','Removed'),(82,'TX082','Released',NULL,'2018-09-05','Pending'),(83,'TX083','Never Detained',NULL,NULL,'Resolved'),(84,'TX084','Detained','El Paso SPC','2019-01-18','Removed'),(85,'TX085','Released',NULL,'2019-03-22','Asylum Granted'),(86,'TX086','Detained','Houston SPC','2019-06-15','Pending'),(87,'TX087','Never Detained',NULL,NULL,'Resolved'),(88,'TX088','Detained','Port Isabel Detention Center','2020-01-10','Removed'),(89,'TX089','Released',NULL,'2020-03-05','Pending'),(90,'TX090','Never Detained',NULL,NULL,'Asylum Granted'),(91,'TX091','Detained','Laredo Detention Center','2020-05-20','Removed'),(92,'TX092','Released',NULL,'2020-07-15','Pending'),(93,'TX093','Never Detained',NULL,NULL,'Resolved'),(94,'TX094','Detained','El Paso SPC','2020-09-01','Removed'),(95,'TX095','Released',NULL,'2020-10-18','Asylum Granted'),(96,'TX096','Detained','Houston SPC','2020-11-30','Pending'),(97,'TX097','Never Detained',NULL,NULL,'Resolved'),(98,'TX098','Detained','Port Isabel Detention Center','2020-12-15','Removed'),(99,'TX099','Released',NULL,'2020-12-28','Pending'),(100,'TX100','Never Detained',NULL,NULL,'Asylum Granted'),(101,'TX101','Detained','Houston SPC','2012-03-15','Pending'),(102,'TX102','Released',NULL,'2012-04-10','Awaiting Hearing'),(103,'TX103','Never Detained',NULL,NULL,'Resolved'),(104,'TX104','Detained','El Paso SPC','2012-06-18','Removed'),(105,'TX105','Released',NULL,'2013-01-12','Asylum Granted'),(106,'TX106','Detained','Port Isabel Detention Center','2013-02-14','Pending'),(107,'TX107','Never Detained',NULL,NULL,'Resolved'),(108,'TX108','Detained','Houston SPC','2013-04-25','Removed'),(109,'TX109','Released',NULL,'2013-05-30','Pending'),(110,'TX110','Never Detained',NULL,NULL,'Asylum Granted'),(111,'TX111','Detained','Laredo Detention Center','2014-01-10','Removed'),(112,'TX112','Released',NULL,'2014-02-12','Pending'),(113,'TX113','Never Detained',NULL,NULL,'Resolved'),(114,'TX114','Detained','El Paso SPC','2014-04-20','Removed'),(115,'TX115','Released',NULL,'2014-05-25','Asylum Granted'),(116,'TX116','Detained','Houston SPC','2014-06-30','Pending'),(117,'TX117','Never Detained',NULL,NULL,'Resolved'),(118,'TX118','Detained','Port Isabel Detention Center','2015-01-18','Removed'),(119,'TX119','Released',NULL,'2015-02-22','Pending'),(120,'TX120','Never Detained',NULL,NULL,'Asylum Granted'),(121,'TX121','Detained','Laredo Detention Center','2016-01-12','Removed'),(122,'TX122','Released',NULL,'2016-02-14','Pending'),(123,'TX123','Never Detained',NULL,NULL,'Resolved'),(124,'TX124','Detained','El Paso SPC','2016-04-25','Removed'),(125,'TX125','Released',NULL,'2017-01-10','Asylum Granted'),(126,'TX126','Detained','Houston SPC','2017-02-12','Pending'),(127,'TX127','Never Detained',NULL,NULL,'Resolved'),(128,'TX128','Detained','Port Isabel Detention Center','2017-04-20','Removed'),(129,'TX129','Released',NULL,'2018-01-25','Pending'),(130,'TX130','Never Detained',NULL,NULL,'Asylum Granted'),(131,'TX131','Detained','Laredo Detention Center','2018-02-28','Removed'),(132,'TX132','Released',NULL,'2018-03-30','Pending'),(133,'TX133','Never Detained',NULL,NULL,'Resolved'),(134,'TX134','Detained','El Paso SPC','2019-01-15','Removed'),(135,'TX135','Released',NULL,'2019-02-20','Asylum Granted'),(136,'TX136','Detained','Houston SPC','2019-03-25','Pending'),(137,'TX137','Never Detained',NULL,NULL,'Resolved'),(138,'TX138','Detained','Port Isabel Detention Center','2020-01-12','Removed'),(139,'TX139','Released',NULL,'2020-02-14','Pending'),(140,'TX140','Never Detained',NULL,NULL,'Asylum Granted'),(141,'TX141','Detained','Laredo Detention Center','2020-03-20','Removed'),(142,'TX142','Released',NULL,'2020-04-25','Pending'),(143,'TX143','Never Detained',NULL,NULL,'Resolved'),(144,'TX144','Detained','El Paso SPC','2020-05-30','Removed'),(145,'TX145','Released',NULL,'2020-06-18','Asylum Granted'),(146,'TX146','Detained','Houston SPC','2020-07-10','Pending'),(147,'TX147','Never Detained',NULL,NULL,'Resolved'),(148,'TX148','Detained','Port Isabel Detention Center','2020-08-12','Removed'),(149,'TX149','Released',NULL,'2020-09-15','Pending'),(150,'TX150','Never Detained',NULL,NULL,'Asylum Granted');
+/*!40000 ALTER TABLE `custodystatus` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-12-01 15:18:06

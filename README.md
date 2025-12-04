@@ -35,17 +35,17 @@ Adding the connection to server
 ![Adding_Connection.png](Images/Adding_Connection.png)
 
 
-Naming the connection. Do not change your hostname nor port but keep in mind the numbers
+Naming the connection. Do not change your hostname nor port but keep in mind the numbers.
 
 
 ![Name_Connection.png](Images/Name_Connection.png)
 
-Create a new schema within your server. Make sure it has the exact naming convention as **immigration_integration**
+Create a new schema within your server. Make sure it has the exact naming convention as *immigration_integration*
 
 
 ![New_Schema.png](Images/New_Schema.png)
 
-Import your files
+Import your files from the *Dump Project Folder*. 
 
 
 ![Data_Import.png](Images/Data_Import.png)
